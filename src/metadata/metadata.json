@@ -1,0 +1,559 @@
+{
+  "package": "IBMWatsonTTS",
+  "tagline": "IBM Watson Text To Speech API",
+  "description": "The IBM® Text to Speech service provides an API that uses IBM's speech-synthesis capabilities to synthesize text into natural-sounding speech in a variety of languages, accents, and voices.",
+  "image": "http://logo.clearbit.com/bluemix.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-IBMWatsonTTS-package",
+  "keywords": [
+    "API",
+    "speech",
+    "text"
+  ],
+  "accounts": {
+    "domain": "ibm.com",
+    "credentials": [
+      "username",
+      "password"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getVoices",
+      "description": "Retrieves a list of all voices available for use with the service. The information includes the voice's name, language, and gender, among other things.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleVoice",
+      "description": "Lists information about the specified voice.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "voice",
+          "type": "String",
+          "info": "The voice about which information is to be returned. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of a custom voice model about which information is to be returned. You must make the request with the service credentials of the model's owner. Omit the parameter to see information about the voice with no customization.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "synthesizesTextToAudio",
+      "description": "Synthesizes text to spoken audio, returning the synthesized audio stream as an array of bytes.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Provide plain text or text that is annotated with SSML. Text size is limited to 5 KB. ",
+          "required": true
+        },
+        {
+          "name": "accept",
+          "type": "String",
+          "info": "The requested MIME type of the audio. Possible values: audio/ogg;codecs=opus (the default), audio/wav, audio/flac, audio/l16;rate=rate, audio/mulaw;rate=rate, audio/basic",
+          "required": false
+        },
+        {
+          "name": "voice",
+          "type": "String",
+          "info": "The voice that is to be used for the synthesis. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
+          "required": false
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of a custom voice model about which information is to be returned. You must make the request with the service credentials of the model's owner. Omit the parameter to see information about the voice with no customization.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getPronunciation",
+      "description": "Returns the phonetic pronunciation for the specified word.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "info": "Provide plain text or text that is annotated with SSML. Text size is limited to 5 KB. ",
+          "required": true
+        },
+        {
+          "name": "voice",
+          "type": "String",
+          "info": "The voice in which the pronunciation for the specified word is to be returned. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
+          "required": false
+        },
+        {
+          "name": "format",
+          "type": "String",
+          "info": "The phoneme set in which the pronunciation is to be returned: ipa (the default), ibm",
+          "required": false
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of a custom voice model about which information is to be returned. You must make the request with the service credentials of the model's owner. Omit the parameter to see information about the voice with no customization.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createVoiceModel",
+      "description": "Creates a new empty custom voice model that is owned by the requesting user.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "The name of the new custom voice model.",
+          "required": true
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "info": "The language of the new custom voice model. Avaliable values: de-DE, en-GB, en-US (the default), es-ES, es-LA, es-US, fr-FR, it-IT, ja-JP, pt-BR",
+          "required": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "A description of the new custom voice model.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateVoiceModel",
+      "description": "Updates information for the specified custom voice model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model to be updated. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "A new name for the custom voice model.",
+          "required": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "A description of the new custom voice model.",
+          "required": false
+        },
+        {
+          "name": "words",
+          "type": "JSON",
+          "info": "Array of objects. An array of WordUpdate objects that provides a list of words and their translations to be added to or updated in the custom voice model. Send an empty array to make no additions or updates. See README for more details.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getVoiceModels",
+      "description": "Lists metadata such as the name and description for all custom voice models that you own for all languages. Specify a language to list the voice models that you own for the specified language only.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "info": "The language for which custom voice models owned by the requester are to be returned. Possible values: de-DE, en-GB, en-US, es-ES, es-LA, es-US, fr-FR, it-IT, ja-JP, pt-BR",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addWordsToVoiceModel",
+      "description": "Adds one or more words and their translations to the specified custom voice model. Adding a new translation for a word that already exists in a custom model overwrites the word's existing translation.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be updated. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        },
+        {
+          "name": "words",
+          "type": "JSON",
+          "info": "Array of objects. An array of WordAdd objects that provides information about the words to be added to the custom voice model. See README for more details.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addSingleWordToVoiceModel",
+      "description": "Adds a single word and its translation to the specified custom voice model. Adding a new translation for a word that already exists in a custom model overwrites the word's existing translation.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be updated. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        },
+        {
+          "name": "word",
+          "type": "String",
+          "info": "The word that is to be added to the custom voice model.",
+          "required": true
+        },
+        {
+          "name": "translation",
+          "type": "String",
+          "info": "The phonetic or sounds-like translation for the word. A phonetic translation is based on the SSML format for representing the phonetic string of a word either as an IPA or IBM SPR translation. A sounds-like translation consists of one or more words that, when combined, sound like the word.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getVoiceModelWords",
+      "description": "Lists all of the words and their translations for the specified custom voice model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be updated. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getVoiceModelSingleWord",
+      "description": "Returns the translation for a single word from the specified custom model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be updated. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        },
+        {
+          "name": "word",
+          "type": "String",
+          "info": "The word that is to be returned from the custom voice model.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteVoiceModelSingleWord",
+      "description": "Deletes a single word from the specified custom voice model. Only the owner of a custom voice model can use this method to delete a word from the model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model from which the word is to be deleted. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        },
+        {
+          "name": "word",
+          "type": "String",
+          "info": "The word that is to be deleted from the custom voice model.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteVoiceModel",
+      "description": "Deletes the custom voice model with the specified customization_id. Only the owner of a custom voice model can use this method to delete the model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be deleted. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
