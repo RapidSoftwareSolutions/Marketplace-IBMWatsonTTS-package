@@ -27,10 +27,7 @@ class IBMWatsonTTSTest extends BaseTestCase {
         
         foreach($routes as $file) {
             $var = '{  
-                        "args":{  
-                            "username":"e1b6f457-ffe9-4c0e-a94c-fefadcd1d81a",
-                            "password":"qXG7YqIBqy0I"
-                        }
+                        "args":{}
                     }';
             $post_data = json_decode($var, true);
 
