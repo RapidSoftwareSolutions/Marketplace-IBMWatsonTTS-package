@@ -2,7 +2,7 @@
   "package": "IBMWatsonTTS",
   "tagline": "IBM Watson Text To Speech API",
   "description": "The IBM® Text to Speech service provides an API that uses IBM's speech-synthesis capabilities to synthesize text into natural-sounding speech in a variety of languages, accents, and voices.",
-  "image": "http://logo.clearbit.com/bluemix.com",
+  "image": "https://watson-api-explorer.mybluemix.net/images/watson-apis/TexttoSpeech.svg",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-IBMWatsonTTS-package",
   "keywords": [
     "API",
