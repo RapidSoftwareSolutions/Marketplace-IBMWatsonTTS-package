@@ -236,6 +236,40 @@
       ]
     },
     {
+      "name": "getSingleVoiceModel",
+      "description": "Lists all information about the specified custom voice model.",
+      "args": [
+        {
+          "name": "username",
+          "type": "credentials",
+          "info": "username obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "credentials",
+          "info": "password obtained from IBM Bluemix.",
+          "required": true
+        },
+        {
+          "name": "customizationId",
+          "type": "String",
+          "info": "The GUID of the custom voice model that is to be returned. You must make the request with the service credentials of the model's owner.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
       "name": "updateVoiceModel",
       "description": "Updates information for the specified custom voice model.",
       "args": [

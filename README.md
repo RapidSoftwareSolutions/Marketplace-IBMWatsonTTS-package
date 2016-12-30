@@ -62,6 +62,15 @@ Creates a new empty custom voice model that is owned by the requesting user.
 | language   | String     | The language of the new custom voice model. Avaliable values: de-DE, en-GB, en-US (the default), es-ES, es-LA, es-US, fr-FR, it-IT, ja-JP, pt-BR
 | description| String     | A description of the new custom voice model.
 
+## IBMWatsonTTS.getSingleVoiceModel
+Lists all information about the specified custom voice model.
+
+| Field          | Type       | Description
+|----------------|------------|----------
+| username       | credentials| username obtained from IBM Bluemix.
+| password       | credentials| password obtained from IBM Bluemix.
+| customizationId| String     | The GUID of the custom voice model that is to be returned. You must make the request with the service credentials of the model's owner.
+
 ## IBMWatsonTTS.updateVoiceModel
 Updates information for the specified custom voice model.
 
