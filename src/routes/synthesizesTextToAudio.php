@@ -60,7 +60,7 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
                                 ],
                                 [
                                     'name' => 'file',
-                                    'filename' => bin2hex(random_bytes(5)) . '.wav',
+                                    'filename' => bin2hex(random_bytes(5)) . $settings['fileExtensions']['wav'],
                                     'contents' => $responseApi
                                 ],
                             ]

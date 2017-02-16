@@ -18,6 +18,7 @@ return [
         
         'api_url' => 'https://stream.watsonplatform.net/text-to-speech/api',
         'uploadServiceUrl' => 'http://104.198.149.144:8080',
+        'fileExtensions' => ['wav' => '.wav'],
 
     ],
 ];
