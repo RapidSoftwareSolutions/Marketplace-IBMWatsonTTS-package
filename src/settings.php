@@ -16,6 +16,8 @@ return [
             'level' => \Monolog\Logger::DEBUG,
         ],
         
-        'api_url' => 'https://stream.watsonplatform.net/text-to-speech/api'
+        'api_url' => 'https://stream.watsonplatform.net/text-to-speech/api',
+        'uploadServiceUrl' => 'http://104.198.149.144:8080',
+
     ],
 ];
