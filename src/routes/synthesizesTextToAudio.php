@@ -87,7 +87,14 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
 
                 }
             },
-            function (GuzzleHttp\Exception\RequestException $exception) use (&$result) {
+            function (GuzzleHttp\Exception\BadResponseException $exception) use (&$result) {
+
+                $result['callback'] = 'error';
+                $result['contextWrites']['to']['status_code'] = 'API_ERROR';
+                $result['contextWrites']['to']['status_msg'] = $exception->getMessage();
+
+            },
+            function (GuzzleHttp\Exception\ConnectException $exception) use (&$result) {
                 $result['callback'] = 'error';
                 $result['contextWrites']['to']['status_code'] = 'INTERNAL_PACKAGE_ERROR';
                 $result['contextWrites']['to']['status_msg'] = 'Something went wrong inside the package.';
