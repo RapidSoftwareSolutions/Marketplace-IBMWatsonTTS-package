@@ -63,7 +63,8 @@
         },
         {
           "name": "voice",
-          "type": "String",
+          "type": "Select",
+          "options": ["de-DE_BirgitVoice","de-DE_DieterVoice","en-GB_KateVoice","en-US_AllisonVoice","en-US_LisaVoice","en-US_MichaelVoice","es-ES_LauraVoice","es-ES_EnriqueVoice","es-LA_SofiaVoice","es-US_SofiaVoice","fr-FR_ReneeVoice","it-IT_FrancescaVoice","ja-JP_EmiVoice","pt-BR_IsabelaVoice"],
           "info": "The voice about which information is to be returned. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
           "required": true
         },
@@ -115,7 +116,8 @@
         },
         {
           "name": "voice",
-          "type": "String",
+          "type": "Select",
+          "options": ["de-DE_BirgitVoice","de-DE_DieterVoice","en-GB_KateVoice","en-US_AllisonVoice","en-US_LisaVoice","en-US_MichaelVoice","es-ES_LauraVoice","es-ES_EnriqueVoice","es-LA_SofiaVoice","es-US_SofiaVoice","fr-FR_ReneeVoice","it-IT_FrancescaVoice","ja-JP_EmiVoice","pt-BR_IsabelaVoice"],
           "info": "The voice that is to be used for the synthesis. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
           "required": false
         },
@@ -161,7 +163,8 @@
         },
         {
           "name": "voice",
-          "type": "String",
+          "type": "Select",
+          "options": ["de-DE_BirgitVoice","de-DE_DieterVoice","en-GB_KateVoice","en-US_AllisonVoice","en-US_LisaVoice","en-US_MichaelVoice","es-ES_LauraVoice","es-ES_EnriqueVoice","es-LA_SofiaVoice","es-US_SofiaVoice","fr-FR_ReneeVoice","it-IT_FrancescaVoice","ja-JP_EmiVoice","pt-BR_IsabelaVoice"],
           "info": "The voice in which the pronunciation for the specified word is to be returned. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice",
           "required": false
         },
@@ -213,7 +216,8 @@
         },
         {
           "name": "language",
-          "type": "String",
+          "type": "Select",
+          "options":["de-DE","en-GB","en-US","es-ES","es-LA","es-US","fr-FR","it-IT","ja-JP","pt-BR"],
           "info": "The language of the new custom voice model. Avaliable values: de-DE, en-GB, en-US (the default), es-ES, es-LA, es-US, fr-FR, it-IT, ja-JP, pt-BR",
           "required": false
         },
@@ -339,7 +343,8 @@
         },
         {
           "name": "language",
-          "type": "String",
+          "type": "Select",
+          "options":["de-DE","en-GB","en-US","es-ES","es-LA","es-US","fr-FR","it-IT","ja-JP","pt-BR"],
           "info": "The language for which custom voice models owned by the requester are to be returned. Possible values: de-DE, en-GB, en-US, es-ES, es-LA, es-US, fr-FR, it-IT, ja-JP, pt-BR",
           "required": false
         }
