@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $response, $args) {
+$app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $response) {
 
     $settings = $this->settings;
 
