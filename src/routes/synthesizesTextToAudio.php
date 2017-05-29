@@ -12,6 +12,9 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
         $post_data = $validateRes;
     }
 
+    var_dump($post_data['args']);
+    die();
+
     $auth = [$post_data['args']['username'], $post_data['args']['password']];
 
     $query_str = $settings['api_url'] . '/v1/synthesize';
@@ -47,10 +50,8 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
         ->then(
             function (\Psr\Http\Message\ResponseInterface $response) use ($client, $post_data, $settings, &$result) {
                 $responseApi = $response->getBody()->getContents();
+
                 $size = strlen($responseApi);
-                echo $size;
-                var_dump($responseApi);
-                die();
 
                 if (in_array($response->getStatusCode(), ['200', '201', '202', '203', '204'])) {
                     try {
