@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $response) {
+$app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $response, $args) {
 
     $settings = $this->settings;
 
@@ -11,9 +11,6 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
     } else {
         $post_data = $validateRes;
     }
-
-    var_dump($post_data['args']);
-    die();
 
     $auth = [$post_data['args']['username'], $post_data['args']['password']];
 
