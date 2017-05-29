@@ -49,6 +49,8 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
                 $responseApi = $response->getBody()->getContents();
 
                 $size = strlen($responseApi);
+                var_dump($responseApi);
+                die();
 
                 if (in_array($response->getStatusCode(), ['200', '201', '202', '203', '204'])) {
                     try {
