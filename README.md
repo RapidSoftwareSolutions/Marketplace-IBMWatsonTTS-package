@@ -115,11 +115,7 @@ Adds one or more words and their translations to the specified custom voice mode
 [  
     {  
         "word":"EEE",
-        "translation":"<phoneme alphabet=\"ibm\" ph=\"tr1Ipxl.1i\"></phoneme>"
-    },
-    {  
-        "word":"IEEE",
-        "translation":"<phoneme alphabet=\"ibm\" ph=\"1Y.tr1Ipxl.1i\"></phoneme>"
+        "translation":"<phoneme alphabet='ibm' ph='EEE'></phoneme>"
     }
 ]
 ```
