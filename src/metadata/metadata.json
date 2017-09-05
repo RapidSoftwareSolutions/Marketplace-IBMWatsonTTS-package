@@ -110,8 +110,9 @@
         },
         {
           "name": "accept",
-          "type": "String",
-          "info": "The requested MIME type of the audio. Possible values: audio/ogg;codecs=opus (the default), audio/wav, audio/flac, audio/l16;rate=rate, audio/mulaw;rate=rate, audio/basic",
+          "type": "Select",
+          "options": ["audio/ogg","audio/ogg;codecs=opus","audio/ogg;codecs=vorbis","audio/wav","audio/flac","audio/mp3","audio/mpeg","audio/webm","audio/webm;codecs=opus","audio/webm;codecs=vorbis","audio/l16;rate=rate","audio/mulaw;rate=rate","audio/basic"],
+          "info": "The requested MIME type of the audio. Possible values: audio/ogg,audio/ogg;codecs=opus,audio/ogg;codecs=vorbis,audio/wav,audio/flac,audio/mp3,audio/mpeg,audio/webm,audio/webm;codecs=opus,audio/webm;codecs=vorbis,audio/l16;rate=rate,audio/mulaw;rate=rate,audio/basic",
           "required": false
         },
         {
@@ -170,7 +171,8 @@
         },
         {
           "name": "format",
-          "type": "String",
+          "type": "Select",
+          "options":["ipa","ibm"],
           "info": "The phoneme set in which the pronunciation is to be returned: ipa (the default), ibm",
           "required": false
         },
@@ -384,9 +386,30 @@
         },
         {
           "name": "words",
-          "type": "JSON",
+          "type": "Array",
           "info": "Array of objects. An array of WordAdd objects that provides information about the words to be added to the custom voice model. See README for more details.",
-          "required": true
+          "required": true,
+          "structure": [
+            {
+              "name": "word",
+              "type": "String",
+              "info": "A word to be added or updated for the custom voice model.",
+              "required": true
+            },
+            {
+              "name": "translation",
+              "type": "String",
+              "info": "The phonetic or sounds-like translation for the word. A phonetic translation is based on the SSML format for representing the phonetic string of a word either as an IPA or IBM SPR translation. A sounds-like translation consists of one or more words that, when combined, sound like the word.",
+              "required": true
+            },
+            {
+              "name": "part_of_speech",
+              "type": "Select",
+              "options": ["Josi","Mesi","Kigo","Gobi","Dosi","Jodo","Koyu","Stbi","Suji","Kedo","Fuku","Keyo","Stto","Reta","Stzo","Kato","Hoka"],
+              "info": "The part of speech for the word. Must be: Josi,Mesi,Kigo,Gobi,Dosi,Jodo,Koyu,Stbi,Suji,Kedo,Fuku,Keyo,Stto,Reta,Stzo,Kato,Hoka",
+              "required": false
+            }
+          ]
         }
       ],
       "callbacks": [

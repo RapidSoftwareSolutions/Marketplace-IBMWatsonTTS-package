@@ -38,7 +38,8 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
             'headers' => $headers,
             "auth" => $auth,
             "json" => $body,
-            "stream" => 'true'
+            "stream" => 'true',
+            'query' => $query
         ]);
         $responseBody = $resp->getBody()->getContents();
 
@@ -83,3 +84,4 @@ $app->post('/api/IBMWatsonTTS/synthesizesTextToAudio', function ($request, $resp
     }
     return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($result);
 });
+

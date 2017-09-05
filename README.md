@@ -1,6 +1,6 @@
 # IBMWatsonTTS Package
 The IBM® Text to Speech service provides an API that uses IBM's speech-synthesis capabilities to synthesize text into natural-sounding speech in a variety of languages, accents, and voices.
-* Domain: ibm.com
+* Domain: [ibm.com](https://ibm.com)
 * Credentials: username, password
 
 ## How to get credentials: 
