@@ -111,8 +111,8 @@
         {
           "name": "accept",
           "type": "Select",
-          "options": ["audio/ogg","audio/ogg;codecs=opus","audio/ogg;codecs=vorbis","audio/wav","audio/flac","audio/mp3","audio/mpeg","audio/webm","audio/webm;codecs=opus","audio/webm;codecs=vorbis","audio/l16;rate=rate","audio/mulaw;rate=rate","audio/basic"],
-          "info": "The requested MIME type of the audio. Possible values: audio/ogg,audio/ogg;codecs=opus,audio/ogg;codecs=vorbis,audio/wav,audio/flac,audio/mp3,audio/mpeg,audio/webm,audio/webm;codecs=opus,audio/webm;codecs=vorbis,audio/l16;rate=rate,audio/mulaw;rate=rate,audio/basic",
+          "options": ["audio/ogg","audio/ogg;codecs=opus","audio/ogg;codecs=vorbis","audio/wav","audio/flac","audio/mp3","audio/mpeg","audio/webm","audio/webm;codecs=opus","audio/webm;codecs=vorbis","audio/basic"],
+          "info": "The requested MIME type of the audio. Possible values: audio/ogg,audio/ogg;codecs=opus,audio/ogg;codecs=vorbis,audio/wav,audio/flac,audio/mp3,audio/mpeg,audio/webm,audio/webm;codecs=opus,audio/webm;codecs=vorbis,audio/basic",
           "required": false
         },
         {

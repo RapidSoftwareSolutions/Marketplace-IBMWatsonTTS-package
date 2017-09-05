@@ -35,7 +35,7 @@ Synthesizes text to spoken audio, returning the synthesized audio stream as an a
 | username       | credentials| username obtained from IBM Bluemix.
 | password       | credentials| password obtained from IBM Bluemix.
 | text           | String     | Provide plain text or text that is annotated with SSML. Text size is limited to 5 KB. 
-| accept         | String     | The requested MIME type of the audio. Possible values: audio/ogg;codecs=opus (the default), audio/wav, audio/flac, audio/l16;rate=rate, audio/mulaw;rate=rate, audio/basic
+| accept         | String     | The requested MIME type of the audio. Possible values: audio/ogg,audio/ogg;codecs=opus,audio/ogg;codecs=vorbis,audio/wav,audio/flac,audio/mp3,audio/mpeg,audio/webm,audio/webm;codecs=opus,audio/webm;codecs=vorbis,audio/basic
 | voice          | String     | The voice that is to be used for the synthesis. Avaliable values: de-DE_BirgitVoice, de-DE_DieterVoice, en-GB_KateVoice, en-US_AllisonVoice, en-US_LisaVoice, en-US_MichaelVoice, es-ES_LauraVoice, es-ES_EnriqueVoice, es-LA_SofiaVoice, es-US_SofiaVoice, fr-FR_ReneeVoice, it-IT_FrancescaVoice, ja-JP_EmiVoice, pt-BR_IsabelaVoice
 | customizationId| String     | The GUID of a custom voice model about which information is to be returned. You must make the request with the service credentials of the model's owner. Omit the parameter to see information about the voice with no customization.
 
