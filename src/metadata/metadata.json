@@ -406,7 +406,7 @@
               "name": "part_of_speech",
               "type": "Select",
               "options": ["Josi","Mesi","Kigo","Gobi","Dosi","Jodo","Koyu","Stbi","Suji","Kedo","Fuku","Keyo","Stto","Reta","Stzo","Kato","Hoka"],
-              "info": "The part of speech for the word. Must be: Josi,Mesi,Kigo,Gobi,Dosi,Jodo,Koyu,Stbi,Suji,Kedo,Fuku,Keyo,Stto,Reta,Stzo,Kato,Hoka",
+              "info": "Japanese only. The part of speech for the word. Must be: Josi,Mesi,Kigo,Gobi,Dosi,Jodo,Koyu,Stbi,Suji,Kedo,Fuku,Keyo,Stto,Reta,Stzo,Kato,Hoka",
               "required": false
             }
           ]
